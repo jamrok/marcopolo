@@ -23,7 +23,7 @@ class Spider(object):
         self.session.headers['Authorization'] = 'token ' + oauth_token
 
         self.polos = []
-        links = "{}/search/code?q=filename:polo%20extension:polo".format(self.endpoint)
+        links = "{}/search/code?q=filename:polo%20extension:polo+repo:rackerlabs/marcopolo".format(self.endpoint)
         while links:
             r = self.session.get(links)
             try:
